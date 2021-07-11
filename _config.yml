@@ -1,11 +1,11 @@
 # The Site Configuration
 
 # Import the theme
-remote_theme: cotes2020/jekyll-theme-chirpy
+theme: jekyll-theme-chirpy
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
 # change below value to '/projectname'.
-baseurl: "/nin1.github.io"
+baseurl: ""
 
 # the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
 lang: en-GB
@@ -46,7 +46,7 @@ social:
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/gameshardy
 
-#google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: google_meta_tag_verification # change to your verification string
 # --------------------------
 
 google_analytics:
@@ -67,7 +67,7 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: dark
+theme_mode: # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
