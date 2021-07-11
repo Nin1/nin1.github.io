@@ -1672,3 +1672,40 @@ $sidebar-display: "sidebar-display";
     margin-left: 41px;
   }
 }
+
+.big-post-list {
+  margin-top: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid var(--main-border-color);
+
+  .post-preview-container {
+    img {
+      padding-top: 0.5rem;
+      padding-right: 0.5rem;
+      padding-bottom: 0.5rem;
+      vertical-align: middle;
+      width: 50%;
+      height: 50%;
+    }
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--main-border-color);
+  }
+
+  .post-preview {
+    width: 200%;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+
+    a:hover {
+      @extend %link-hover;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+  }
+}

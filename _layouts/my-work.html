@@ -7,29 +7,37 @@ layout: page
 
 {% assign posts = site.posts | where_exp: "item", "item.portfolio == true" %}
 
-<div id="post-list">
+<div class="big-post-list">
   {% for post in posts %}
 
-  <div class="post-preview">
-    <h1>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h1>
+  <div class="post-preview-container">
+    <div class="post-preview">
+      <h1>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h1>
 
-    <div class="post-content">
-      <p>
-        {% include no-linenos.html content=post.content %} {{ content |
-        markdownify | strip_html | truncate: 200 }}
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-      <div>
-        <!-- Maybe put start/end date here -->
+      <div class="post-content">
+        <p>
+          {% include no-linenos.html content=post.content %} {{ content |
+          markdownify | strip_html | truncate: 200 }}
+        </p>
       </div>
+
+      <div class="post-meta text-muted d-flex justify-content-between">
+        <div>
+          <!-- Maybe put start/end date here -->
+        </div>
+      </div>
+      <!-- .post-meta -->
     </div>
-    <!-- .post-meta -->
+    <!-- .post-review -->
+    <img
+      src="../{{post.icon}}"
+      alt="{{post.alttext}}"
+      onerror="this.style.display='none'"
+    />
   </div>
-  <!-- .post-review -->
+  <!-- .post-preview-container -->
 
   {% endfor %}
 </div>
