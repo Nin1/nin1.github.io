@@ -1,0 +1,97 @@
+---
+layout: page
+# The Home page layout
+---
+
+<!-- Show portfolio posts (Up to 3, with a 'see all' link if more exist) -->
+
+{% assign portfolio_posts = site.posts | where_exp: "item", "item.portfolio ==
+true" %} {% assign posts = "" | split: "" %} {% assign portfolio_num =
+portfolio_posts.size %} {% assign max_num = 3 %} {% for i in
+(0..portfolio_posts.size) limit: max_num %} {% assign posts = posts | push:
+portfolio_posts[i] %} {% endfor %}
+
+<div class="post-list">
+  <h1>My Work</h1>
+  {% for post in posts %}
+
+  <div class="post-preview-container">
+    <div class="post-preview">
+      <h1>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h1>
+
+      <div class="post-content">
+        <p>
+          {% include no-linenos.html content=post.content %} {{ content |
+          markdownify | strip_html | truncate: 200 }}
+        </p>
+      </div>
+
+      <div class="post-meta text-muted d-flex justify-content-between">
+        <div>
+          <!-- Maybe put start/end date here -->
+        </div>
+      </div>
+      <!-- .post-meta -->
+    </div>
+    <!-- .post-preview -->
+    <img
+      src="{{post.icon}}"
+      alt="{{post.alttext}}"
+      onerror="this.style.display='none'"
+    />
+  </div>
+  <!-- .post-preview-container -->
+  {% endfor %}
+  <div class="see-all">
+    <a href="{{ '/' | relative_url }}mywork/">See all</a>
+  </div>
+</div>
+<!-- .post-list -->
+
+<!-- Show blog posts (Up to 3, with a 'see all' link if more exist) -->
+
+{% assign blog_posts = site.posts | where_exp: "item", "item.blog == true" %} {%
+assign posts = "" | split: "" %} {% assign blog_num = blog_posts.size %} {%
+assign max_num = 3 %} {% for i in (0..blog_posts.size) limit: max_num %} {%
+assign posts = posts | push: blog_posts[i] %} {% endfor %}
+
+<div class="post-list">
+  <h1>Blogs</h1>
+  {% for post in posts %}
+
+  <div class="post-preview-container">
+    <div class="post-preview">
+      <h1>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h1>
+
+      <div class="post-content">
+        <p>
+          {% include no-linenos.html content=post.content %} {{ content |
+          markdownify | strip_html | truncate: 200 }}
+        </p>
+      </div>
+
+      <div class="post-meta text-muted d-flex justify-content-between">
+        <div>
+          <!-- Maybe put start/end date here -->
+        </div>
+      </div>
+      <!-- .post-meta -->
+    </div>
+    <!-- .post-preview -->
+    <img
+      src="{{post.icon}}"
+      alt="{{post.alttext}}"
+      onerror="this.style.display='none'"
+    />
+  </div>
+  <!-- .post-preview-container -->
+  {% endfor %}
+  <div class="see-all">
+    <a href="{{ '/' | relative_url }}blogs/">See all</a>
+  </div>
+</div>
+<!-- .post-list -->

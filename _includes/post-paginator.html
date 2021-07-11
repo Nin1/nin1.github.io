@@ -35,7 +35,7 @@
   <li class="page-item {% if i == paginator.page %} active{% endif %}">
     <a
       class="page-link btn-box-shadow"
-      href="{% if i != paginator.page %}{{ site.url }}/{% if i > 1 %}page{{ i }}/{% endif %}{% endif %}"
+      href="{% if i != paginator.page %}{{ '/' | relative_url }}blogs/{% if i > 1 %}page{{ i }}/{% endif %}{% endif %}"
       >{{ i }}</a
     >
   </li>

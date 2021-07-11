@@ -1,8 +1,11 @@
 ---
 title: Hello World
 date: 2021-07-11 03:00:00 +0000
+icon: assets/post-icon-placeholder.png
+alttext: This is a blog post!
 categories: [Misc, Test]
 tags: [hello-world] # TAG names should always be lowercase
+blog: true
 ---
 
 ## Yep
