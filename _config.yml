@@ -21,10 +21,11 @@ future: true
 # --------------------------
 title: James Hardy # the main title
 
-tagline: Game Systems Developer # it will display as the sub-title
+tagline: Game Systems Engineer, UK
+tagline2: C++, Java, C#
 
 description: >- # used by seo meta and the atom feed
-  Game developer with 4 years' experience in,
+  Game developer with 4 years' experience in
   C++ and Java game engines, with plenty of unfinished
   Unity C# side-projects.
 
@@ -81,7 +82,7 @@ theme_mode: dark
 img_cdn: ""
 
 # the avatar on sidebar, support local or CORS resources
-avatar: assets/ac.png
+avatar: assets/avatar.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true

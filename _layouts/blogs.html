@@ -61,11 +61,13 @@ default[i] %} {% endfor %} {% endif %}
       <!-- .post-meta -->
     </div>
     <!-- .post-review -->
-    <img
-      src="/{{post.icon}}"
-      alt="{{post.alttext}}"
-      onerror="this.style.display='none'"
-    />
+    <a href="{{ post.url | relative_url }}">
+      <img
+        src="/{{post.icon}}"
+        alt="{{post.alttext}}"
+        onerror="this.style.display='none'"
+      />
+    </a>
   </div>
   <!-- .post-preview-container -->
 

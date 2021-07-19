@@ -36,11 +36,13 @@ portfolio_posts[i] %} {% endfor %}
       <!-- .post-meta -->
     </div>
     <!-- .post-preview -->
-    <img
-      src="/{{post.icon}}"
-      alt="{{post.alttext}}"
-      onerror="this.style.display='none'"
-    />
+    <a href="{{ post.url | relative_url }}">
+      <img
+        src="/{{post.icon}}"
+        alt="{{post.alttext}}"
+        onerror="this.style.display='none'"
+      />
+    </a>
   </div>
   <!-- .post-preview-container -->
   {% endfor %}
@@ -82,11 +84,13 @@ assign posts = posts | push: blog_posts[i] %} {% endfor %}
       <!-- .post-meta -->
     </div>
     <!-- .post-preview -->
-    <img
-      src="{{post.icon}}"
-      alt="{{post.alttext}}"
-      onerror="this.style.display='none'"
-    />
+    <a href="{{ post.url | relative_url }}">
+      <img
+        src="{{post.icon}}"
+        alt="{{post.alttext}}"
+        onerror="this.style.display='none'"
+      />
+    </a>
   </div>
   <!-- .post-preview-container -->
   {% endfor %}
