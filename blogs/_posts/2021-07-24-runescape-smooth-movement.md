@@ -1,7 +1,7 @@
 ---
 title: RuneScape - Smooth Movement
 date: 2021-07-24 12:00:00 +0000
-icon: assets/thumbnails/2021/RuneScape.png
+icon: assets/thumbnails/2021/runescape.png
 alttext: How this website was made
 categories: [Blogs, Website]
 tags: [RuneScape, C++, game engine] # TAG names should always be lowercase
