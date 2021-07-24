@@ -1,7 +1,7 @@
 ---
 title: RuneScape & Old School RuneScape
 date: 2021-07-24 12:00:00 +0000
-icon: assets/post-icon-placeholder.png
+icon: assets/thumbnails/2021/runescape.png
 alttext: Some work I did
 categories: [Work, RuneScape]
 tags: [RuneScape, Old-School-RuneScape] # TAG names should always be lowercase
