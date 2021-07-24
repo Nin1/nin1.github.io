@@ -3,6 +3,9 @@ layout: page
 # The 'Blogs' page layout
 ---
 
+<!-- Since blogs/index.html needs to be html for Jekyll paginator to work, we need to hardcode the header -->
+<h1 class="dynamic-title">Blogs</h1>
+
 {% assign default = site.posts | where_exp: "item", "item.blog == true" %}
 {%assign posts = "" | split: "" %} {% assign offset = paginator.page | minus: 1
 | times: paginator.per_page %}
