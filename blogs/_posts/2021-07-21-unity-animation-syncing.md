@@ -4,7 +4,7 @@ date: 2021-07-21 09:00:00 +0000
 icon: assets/thumbnails/2021/walkcycle.png
 alttext: Synchonising character movement to sprite animation in Unity
 categories: [Unity]
-tags: [unity, c#, animation] # TAG names should always be lowercase
+tags: [Unity, C#, animation] # TAG names should always be lowercase
 blog: true
 ---
 
