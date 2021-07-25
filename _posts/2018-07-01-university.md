@@ -11,7 +11,7 @@ hidden: true
 
 I studied Games Programming at Bournemouth University from 2014 - 2018, and my final year project was focused on level-of-detail (LOD). LOD is the name for a group of techniques used to optimise the amount of computation done when rendering an object based on its importance - usually this 'importance' heuristic is determined by an object's size on-screen, which in turn is determined by its distance from the camera.
 
-I implemented a number of techniques in my own game engine, written in OpenGL and C++.
+By applying LOD techniques well, you can draw a much more detailed scene than otherwise possible. I implemented a number of techniques in my own game engine, written in OpenGL and C++ - You can find the source code [here](https://github.com/Nin1/university-game-engine).
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/8CELh37Eg4g" frameborder="0" allowfullscreen></iframe>
 
@@ -21,11 +21,16 @@ I implemented a number of techniques in my own game engine, written in OpenGL an
 
 ### Mesh-swapping
 
-Mesh-swapping is simply swapping to a mesh with fewer triangles when an object is small on-screen. You can use multiple meshes for multiple levels-of-detail, and intelligently select the mesh to use with a cost/benefit algorithm. To avoid 'popping' when the mesh is swapped, I used a dithering algorithm to smoothly transition between models - This does mean two models are drawn at once briefly, but it's a nice effect!
+Mesh-swapping is simply swapping to a mesh with fewer triangles when an object is small on-screen. You can use multiple meshes for multiple levels-of-detail, and intelligently select the mesh to use with a cost/benefit algorithm to optimise how much geometry is drawn across the whole scene. To avoid 'popping' when the mesh is swapped, I used a dithering algorithm to smoothly transition between models - This does mean two models are drawn at once briefly, but it's a nice effect!
+
+<iframe width="360" height="270" src="https://www.youtube.com/embed/-HVj5Z_1PUs" frameborder="0" allowfullscreen></iframe>
+<iframe width="360" height="270" src="https://www.youtube.com/embed/o7WYfg3EjNk" frameborder="0" allowfullscreen></iframe>
 
 ### 2D Billboards
 
 For very distant objects, mesh-swapping can be taken to an extreme by replacing the mesh with a 2D plane showing a texture of the object instead. This works well for roughly-cylindrical objects such as trees, but in the case of the [Stanford Dragon model](https://en.wikipedia.org/wiki/Stanford_dragon) I rendered one texture for each of 8 directions and selected an appropriate one. The texture can react appropriately to lighting using a normal map.
+
+![billboards]({{site.url}}/assets/posts/2018-07-01-university/billboards.png)
 
 ---
 
