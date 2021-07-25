@@ -45,6 +45,16 @@ For the port I wanted to stay as true to the original as possible, and that incl
 
 As the game itself is relatively simple, I kept most of the code in a single file. A Player struct holds all the variables per player, and a number of Unity button elements represent the keypad and call into the Tower script. The script makes heavy use of coroutines to keep the code linear whilst still waiting for the tower to spin and beeps to play. The Tower script also keeps record of any fields that were just displayed, so that the 'repeat' button can function.
 
+```c#
+// Flash the player's warrior count
+yield return new WaitForSeconds(spin.to(Column.C_SHOP_1));
+lights.on(1);
+setText(player.warriors);
+yield return new WaitForSeconds(audio.play(Sounds.BEEP));
+lights.off();
+clearText();
+```
+
 And that's... kind of it! As I said before, the game logic is pretty simple. All that's left is to work out the odds of things happening - the game makes a lot of random rolls within certain ranges to determine things like how much gold you find, whether you win in battle, or whether your army gets lost. The method here was to just repeat actions over and over until I was confident on the odds. I've entered the Tomb/Ruins a LOT of times...
 
 And I'm very happy with the result:
