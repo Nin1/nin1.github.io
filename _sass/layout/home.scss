@@ -110,6 +110,10 @@
     padding-top: 1.5rem;
     padding-bottom: 1rem;
 
+    a {
+      padding-right: 0.5rem;
+    }
+
     a:hover {
       @extend %link-hover;
     }
@@ -141,6 +145,17 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
+    }
+
+    .post-flair {
+      vertical-align: middle;
+      font-family: monospace;
+      display: inline;
+      font-size: 1rem;
+      color: #aaaaaa;
+      background: #000000;
+      border-radius: 0.2rem;
+      padding: 0.1rem 0.2rem 0.2rem 0.2rem;
     }
 
     .pin {

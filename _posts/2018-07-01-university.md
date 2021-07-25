@@ -1,5 +1,6 @@
 ---
 title: University - LOD & Tessellation
+flair: C++/OpenGL
 date: 2018-07-01 12:00:00 +0000
 icon: assets/thumbnails/2021/uni.png
 alttext: Some work I did

@@ -1,5 +1,6 @@
 ---
 title: Unity - Animation-synced movement
+flair: C#
 date: 2021-07-21 09:00:00 +0000
 icon: assets/thumbnails/2021/walkcycle.png
 alttext: Synchonising character movement to sprite animation in Unity

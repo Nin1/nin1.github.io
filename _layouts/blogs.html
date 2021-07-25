@@ -25,6 +25,9 @@ default[i] %} {% endfor %} {% endif %}
     <div class="post-preview">
       <h1>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.flair %}
+        <div class="post-flair">{{ post.flair }}</div>
+        {% endif %}
       </h1>
 
       <div class="post-content">

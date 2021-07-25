@@ -1730,6 +1730,11 @@ $sidebar-display: "sidebar-display";
     padding-top: 1.5rem;
     padding-bottom: 1rem;
 
+    a {
+      padding-right: 0.5rem;
+      border-bottom: 0px;
+    }
+
     a:hover {
       @extend %link-hover;
     }
@@ -1737,6 +1742,17 @@ $sidebar-display: "sidebar-display";
     h1 {
       font-size: 1.8rem;
       margin: 0;
+    }
+
+    .post-flair {
+      vertical-align: middle;
+      font-family: monospace;
+      display: inline;
+      font-size: 1rem;
+      color: #aaaaaa;
+      background: #000000;
+      border-radius: 0.2rem;
+      padding: 0.1rem 0.2rem 0.2rem 0.2rem;
     }
   }
 }

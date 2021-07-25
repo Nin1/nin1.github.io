@@ -15,7 +15,12 @@ true" %} {% assign portfolio_num = portfolio_posts.size %} {% assign max_num = 3
   <div class="post-preview-container">
     <div class="post-preview">
       <h1>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+        {% if post.flair %}
+        <div class="post-flair">{{ post.flair }}</div>
+        {% endif %}
       </h1>
 
       <div class="post-content">
@@ -62,6 +67,9 @@ assign blog_num = blog_posts.size %} {% assign max_num = 3 %}
     <div class="post-preview">
       <h1>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.flair %}
+        <div class="post-flair">{{ post.flair }}</div>
+        {% endif %}
       </h1>
 
       <div class="post-content">

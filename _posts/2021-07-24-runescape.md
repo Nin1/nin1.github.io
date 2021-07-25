@@ -1,5 +1,6 @@
 ---
 title: RuneScape & Old School RuneScape
+flair: C++/Java
 date: 2021-07-24 12:00:00 +0000
 icon: assets/thumbnails/2021/runescape.png
 alttext: Some work I did
