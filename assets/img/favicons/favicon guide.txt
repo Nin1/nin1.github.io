@@ -1,0 +1,5 @@
+Use https://realfavicongenerator.net/ to generate favicons
+
+Download the html package
+
+Delete browserconfig.xml and site.webmanifest
